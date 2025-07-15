@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece na aba do navegador -->   
+    <title>Página de Apoio - Maikon Morassutti</title>
+    
+    <!-- Carregando o Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração de cores customizadas para o Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tema': {
+                            100: 'var(--cor-tema-100)',
+                            500: 'var(--cor-tema-500)',
+                            600: 'var(--cor-tema-600)',
+                        },
+                        'texto-tema': 'var(--cor-texto-tema)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Folha de Estilos para definir as cores -->
+    <style type="text/css">
+        :root {
+            /* 🎨 Altere a cor principal da página aqui! */
+            --cor-hsl: 217 91% 60%; /* Azul claro como padrão */
+
+            --cor-tema-100: hsl(var(--cor-hsl) / 0.1);
+            --cor-tema-500: hsl(var(--cor-hsl));
+            --cor-tema-600: hsl(var(--cor-hsl) / 0.9);
+            --cor-texto-tema: #ffffff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .profile-image {
+            object-fit: cover;
+        }
+        /* Estilo para o QR Code */
+        .qr-code {
+            max-width: 200px; /* Define a largura máxima do QR code */
+            margin-top: 1.5rem; /* Adiciona espaço acima do QR code */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Container Principal da Página -->
+    <div class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Seção do Perfil (Capa e Foto) -->
+        <header class="relative mb-24">
+            <img src="docs/fundo.jpg" alt="Banner da página" class="w-full h-48 object-cover object-center rounded-2xl shadow-md">
+            <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 sm:left-12 sm:translate-x-0 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <img src="docs/perfil.png" alt="Foto do Perfil" class="w-32 h-32 rounded-full border-4 border-white shadow-lg profile-image">
+                <div class="text-center sm:text-left mt-2 sm:mt-12">
+                    <h1 class="text-3xl font-bold text-slate-900">Maikon Morassutti</h1>
+                    <p class="text-slate-600 mt-1">Criando coisas incríveis para a web.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal (2 Colunas) -->
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-24">
+
+            <!-- Coluna da Esquerda (Conteúdo) -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Caixa de "Sobre" -->
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <h2 class="text-xl font-bold mb-4">Sobre mim</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Olá! 👋 Sou um desenvolvedor apaixonado por tecnologia e inovações. Crio projetos de código aberto para ajudar a comunidade e me desenvolver em novos conceitos e teorias.
+                        <br><br>
+                        Se você gosta do meu trabalho, ou acha que eu preciso tomar um café nesse momento para dar uma acordada, considere me apoiar. Um detalhe interessante, é que cada café me ajuda a dedicar mais tempo para criar novas ferramentas e conteúdos de qualidade para todos!!!
+                    </p>
+                </div>
+
+                <!-- Caixa de "Posts Recentes" -->
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <h2 class="text-xl font-bold mb-4">Posts Recentes</h2>
+                    <div class="space-y-6">
+                        <!-- Post do Projeto de Finanças -->
+                        <a href="https://minhasfinancasmorassutti.firebaseapp.com/" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-lg hover:bg-slate-50 transition-colors">
+                            <div class="flex items-start gap-4">
+                                <img src="docs/dindim.jpg" alt="Thumbnail do projeto de finanças" class="w-24 h-24 object-cover rounded-lg shadow-md flex-shrink-0">
+                                <div>
+                                    <h3 class="font-semibold">Lançamento do Meu Novo Projeto de Finanças</h3>
+                                    <p class="text-sm text-slate-500 mt-1">Hoje é o grande dia! Depois de dias de trabalho, finalmente concluí meu app de controle financeiro!!! Experimente e me dê um feedback sobre melhorias...</p>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post do YouTube sobre Xadrez -->
+                        <div class="block p-4 rounded-lg">
+                            <a href="https://www.youtube.com/@maikonmorassutti4847" target="_blank" rel="noopener noreferrer" class="block hover:opacity-90 transition-opacity">
+                                <div class="flex items-start gap-4">
+                                    <img src="docs/thumbyt.png" alt="Thumbnail do vídeo de xadrez" class="w-24 h-24 object-cover rounded-lg shadow-md flex-shrink-0">
+                                    <div>
+                                        <h3 class="font-semibold">Me acompanhe no Xadrez!!!</h3>
+                                        <p class="text-sm text-slate-500 mt-1">Um passo a passo do zero até se tornar um GM..</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- Container para as mensagens de agradecimento -->
+                            <div class="mt-6">
+                                <h3 class="text-lg font-bold mb-3 text-slate-800">Mural de Apoiadores</h3>
+                                <div id="container-agradecimentos" class="mt-4 space-y-3">
+                                    <!-- As mensagens dos apoiadores aparecerão aqui -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita (Widget de Pagamento) -->
+            <aside class="lg:col-span-1">
+                <div class="bg-white p-6 rounded-2xl shadow-md sticky top-8">
+                    <h2 class="text-xl font-bold text-center">Pague-me um café</h2>
+                    
+                    <!-- View de Seleção e Formulário (visível por padrão) -->
+                    <div id="view-formulario">
+                        <div class="flex items-center justify-center gap-4 my-6">
+                            <!-- ALTERAÇÃO: Adicionada a classe 'object-contain' para evitar distorção da imagem. -->
+                            <img src="docs/cafe.png" alt="Ícone de Café" class="w-16 h-16 object-contain opacity-95">
+                            <span class="text-2xl text-slate-400">x</span>
+                            <div id="botoes-quantidade" class="flex items-center gap-2">
+                               <button data-valor="1" class="botao-qnt w-12 h-12 bg-tema-500 text-texto-tema rounded-full font-bold text-lg">1</button>
+                               <button data-valor="3" class="botao-qnt w-12 h-12 bg-slate-200 text-slate-700 rounded-full font-bold text-lg hover:bg-slate-300">3</button>
+                               <button data-valor="5" class="botao-qnt w-12 h-12 bg-slate-200 text-slate-700 rounded-full font-bold text-lg hover:bg-slate-300">5</button>
+                            </div>
+                        </div>
+
+                        <div class="my-4">
+                            <input id="input-nome" type="text" placeholder="Nome (opcional)" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-tema-500 focus:outline-none transition">
+                        </div>
+
+                        <div class="my-4">
+                            <textarea id="textarea-mensagem" placeholder="Deixe uma mensagem simpática..." rows="3" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-tema-500 focus:outline-none transition"></textarea>
+                        </div>
+                        
+                        <button id="botao-apoiar" class="w-full bg-tema-500 text-texto-tema font-bold py-3 px-4 rounded-lg hover:bg-tema-600 transition-colors text-lg shadow-md">
+                            Apoiar com R$ 5,00
+                        </button>
+                    </div>
+
+                    <!-- View do QR Code (oculta por padrão) -->
+                    <div id="view-qrcode" class="hidden text-center">
+                        <img id="qr-code-img" src="docs/qr5.jpg" alt="QR Code PIX" class="qr-code">
+                        <p id="qr-code-texto-valor" class="text-lg font-semibold mt-4">Valor: R$ 5,00</p>
+                        <p class="text-sm text-slate-500 mt-2">Escaneie para pagar com PIX</p>
+                        <button id="botao-voltar" class="mt-6 w-full bg-slate-200 text-slate-700 font-bold py-3 px-4 rounded-lg hover:bg-slate-300 transition-colors text-lg">
+                            Voltar
+                        </button>
+                        <button id="botao-cafe-pago" class="mt-2 w-full bg-tema-500 text-texto-tema font-bold py-3 px-4 rounded-lg hover:bg-tema-600 transition-colors text-lg shadow-md">
+                            Café Pago!
+                        </button>
+                    </div>
+
+                    <!-- Links Sociais -->
+                    <div class="mt-6">
+                        <h3 class="font-bold mb-3 text-center text-slate-500 text-sm">Me encontre em:</h3>
+                        <div class="flex justify-center gap-4">
+                            <a href="https://www.linkedin.com/in/maikon-morassutti-42972132/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <img src="docs/link.png" alt="LinkedIn" class="w-6 h-6 hover:opacity-75 transition-opacity">
+                            </a>
+                            <a href="https://github.com/MaikonMorassutti" title="Github" target="_blank" rel="noopener noreferrer">
+                                <img src="docs/git.png" alt="Github" class="w-6 h-6 hover:opacity-75 transition-opacity">
+                            </a>
+                            <a href="https://m.youtube.com/@maikonmorassutti4847" title="YouTube" target="_blank" rel="noopener noreferrer">
+                                <img src="docs/yt.png" alt="YouTube" class="w-6 h-6 hover:opacity-75 transition-opacity">
+                            </a>
+                            <a href="https://www.instagram.com/maikon.morassutti/?hl=it" title="Instagram" target="_blank" rel="noopener noreferrer">
+                                <img src="docs/inst.png" alt="Instagram" class="w-6 h-6 hover:opacity-75 transition-opacity">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Script para a lógica de pagamento -->
+    <script>
+        const precoPorCafe = 5;
+        let valorTotalAtual = 5; // Inicia com o valor padrão
+
+        // Seleciona os elementos do DOM
+        const botoesQuantidade = document.querySelectorAll('.botao-qnt');
+        const botaoApoiar = document.getElementById('botao-apoiar');
+        const botaoVoltar = document.getElementById('botao-voltar');
+        const botaoCafePago = document.getElementById('botao-cafe-pago');
+        
+        const viewFormulario = document.getElementById('view-formulario');
+        const viewQrcode = document.getElementById('view-qrcode');
+        
+        const qrCodeImg = document.getElementById('qr-code-img');
+        const qrCodeTextoValor = document.getElementById('qr-code-texto-valor');
+
+        const inputNome = document.getElementById('input-nome');
+        const textareaMensagem = document.getElementById('textarea-mensagem');
+        const containerAgradecimentos = document.getElementById('container-agradecimentos');
+
+        // Função para atualizar o valor
+        function atualizarValor(quantidade) {
+            valorTotalAtual = quantidade * precoPorCafe;
+            botaoApoiar.textContent = `Apoiar com R$ ${valorTotalAtual.toFixed(2).replace('.', ',')}`;
+        }
+
+        // Adiciona evento de clique para cada botão de quantidade
+        botoesQuantidade.forEach(botao => {
+            botao.addEventListener('click', () => {
+                botoesQuantidade.forEach(btn => {
+                    btn.classList.remove('bg-tema-500', 'text-texto-tema');
+                    btn.classList.add('bg-slate-200', 'text-slate-700');
+                });
+
+                botao.classList.add('bg-tema-500', 'text-texto-tema');
+                botao.classList.remove('bg-slate-200', 'text-slate-700');
+
+                const quantidade = botao.dataset.valor;
+                atualizarValor(quantidade);
+            });
+        });
+
+        // Evento de clique no botão "Apoiar"
+        botaoApoiar.addEventListener('click', () => {
+            qrCodeImg.src = `docs/qr${valorTotalAtual}.jpg`;
+            qrCodeImg.alt = `QR Code PIX para R$ ${valorTotalAtual.toFixed(2).replace('.', ',')}`;
+            qrCodeTextoValor.textContent = `Valor: R$ ${valorTotalAtual.toFixed(2).replace('.', ',')}`;
+
+            viewFormulario.classList.add('hidden');
+            viewQrcode.classList.remove('hidden');
+        });
+
+        // Evento de clique no botão "Voltar"
+        botaoVoltar.addEventListener('click', () => {
+            viewQrcode.classList.add('hidden');
+            viewFormulario.classList.remove('hidden');
+        });
+
+        // Evento de clique no botão "Café Pago"
+        botaoCafePago.addEventListener('click', () => {
+            const nome = inputNome.value.trim() || 'Anônimo';
+            const mensagem = textareaMensagem.value.trim();
+
+            if (mensagem) {
+                const cardAgradecimento = `
+                    <div class="bg-slate-100 p-3 rounded-lg border border-slate-200">
+                        <p class="text-slate-600 italic">"${mensagem}"</p>
+                        <p class="text-right font-semibold text-sm mt-2 text-slate-800">- ${nome}</p>
+                    </div>
+                `;
+                containerAgradecimentos.insertAdjacentHTML('beforeend', cardAgradecimento);
+            }
+
+            // Limpa os campos e volta para a tela inicial do formulário
+            inputNome.value = '';
+            textareaMensagem.value = '';
+            viewQrcode.classList.add('hidden');
+            viewFormulario.classList.remove('hidden');
+        });
+    </script>
+
+</body>
+</html>
